@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/sol.png">
+</head>
+<body>
+    <div class="app">
+        <h1>☀️ Clima Agora</h1>
+        
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Digite o nome da cidade" onkeydown="handleKey(event)">
+            <button onclick="buscarClima()">Buscar</button>
+        </div>
+
+        <div id="resultado" class="weather-result" style="display: none;">
+            
+            <h2 id="cidade-nome"></h2>
+            
+            <div class="main-info">
+                <img id="icone-clima" src="" alt="Ícone do Clima">
+                <p id="temperatura" class="temp"></p>
+            </div>
+
+            <p id="clima-descricao" class="description"></p>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <p class="label">Sensação</p>
+                    <p id="sensacao-termica" class="value"></p>
+                </div>
+                <div class="detail-item">
+                    <p class="label">Umidade</p>
+                    <p id="detalhe-umidade" class="value"></p>
+                </div>
+                <div class="detail-item">
+                    <p class="label">Vento</p>
+                    <p id="detalhe-vento" class="value"></p>
+                </div>
+                <div class="detail-item">
+                    <p class="label">Pressão</p>
+                    <p id="detalhe-pressao" class="value"></p>
+                </div>
+            </div>
+            <div id="previsao-estendida" class="forecast-container">
+                
+            </div>
+        </div>
+        
+        <div id="mensagem-status"></div>
+    <script src="script.js"></script>
+</body>
+</html>
